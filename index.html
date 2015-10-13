@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Conway'sGame of Life</title>
+    <title>Conway's Game of Life</title>
 
     <link rel="stylesheet" type="text/css" href="css/base.css">
-    <script src="js/baseController.js"></script>
     <style type="text/css">
         table {margin:auto;}
     </style>
@@ -16,18 +15,18 @@
         <tr>
             <td align="left">Generation: <span id="spanGen">0</span> </td>
             <td align="right">
-                <button id="start" onclick="startConway(); return true;">Start</button>
-                <button id="pause" onclick="pauseConway(); return true;" disabled="disabled">Pause</button>
-                <button id="reset" onclick="resetConway(); return true;" disabled="disabled">Reset</button>
-                <button id="random" onclick="randomConway(); return true;">Random</button>
-                <button id="wiki" onclick="wikiLink(); return true;">Wiki Intro</button>
+                <button id="startGame" onclick="startConway(); return true;">Start</button>
+                <button id="pauseGame" onclick="pauseConway(); return true;" disabled="disabled">Pause</button>
+                <button id="resetGame" onclick="resetConway(); return true;" disabled="disabled">Reset</button>
+                <button id="randomGame" onclick="randomConway(); return true;">Random</button>
+                <button id="wikiOfGame" onclick="wikiLink(); return true;">Wiki Intro</button>
             </td>
         </tr>
         <tr align="center">
-            <td colspan="3"><canvas id="space"/> </td>
+            <td colspan="3"><canvas id="myCanvas"/> </td>
         </tr>
     </table>
-    <canvas id="background"></canvas>
 
+    <script type="text/javascript" src="js/baseController.js"></script>
 </body>
 </html>
