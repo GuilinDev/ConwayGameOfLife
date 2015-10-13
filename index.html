@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <meta charset="UTF-8"/>
+    <title>Conway'sGame of Life</title>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script src="js/baseController.js"></script>
+    <style type="text/css">
+        table {margin:auto;}
+    </style>
 </head>
 <body>
-    <label>Start Canvas</label>
+    <table>
+        <tr align="center"><td colspan="3"><h3>Conway's Game of Life</h3></td></tr>
+        <tr>
+            <td align="left">Generation: <span id="spanGen">0</span> </td>
+            <td align="right">
+                <button id="start" onclick="startConway(); return true;">Start</button>
+                <button id="pause" onclick="pauseConway(); return true;" disabled="disabled">Pause</button>
+                <button id="reset" onclick="resetConway(); return true;" disabled="disabled">Reset</button>
+                <button id="random" onclick="randomConway(); return true;">Random</button>
+                <button id="wiki" onclick="wikiLink(); return true;">Wiki Intro</button>
+            </td>
+        </tr>
+        <tr align="center">
+            <td colspan="3"><canvas id="space"/> </td>
+        </tr>
+    </table>
     <canvas id="background"></canvas>
-    <label>End Canvas</label>
+
 </body>
 </html>
