@@ -22,7 +22,7 @@ function startConway () {
                 nextGen[[x, y]] = applyRules(x, y);
             }
         }
-        for (x = 0; x < cellYLen; x++) {
+        for (x = 0; x < cellXLen; x++) {
             for (y = 0; y < cellYLen; y++) {
                 cells[[x, y]] = nextGen[[x, y]];
             }
@@ -115,15 +115,17 @@ function applyRules(x, y) {
     // caculate how many live neighbors of one cell
     for (i = 0; i < 8; i++) {
         state = neighbors[i];
-        neighborsCount++;
+        if (state && state==1){
+            neighborsCount++;
+        }
     }
 
     // determine the state of the cell for next generation
-    if (state && state === 1) {
+    if (currentState && currentState == 1) {
         if (neighborsCount < 2 || neighborsCount > 3) {
-            return 1;
-        } else {
             return 0;
+        } else {
+            return 1;
         }
     } else {
         if (neighborsCount === 3){
