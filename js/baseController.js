@@ -69,9 +69,9 @@ function resetConway() {
 };
 
 function randomConway() {
-    for(x = 0; x < cellXLen; y++) {
+    for(x = 0; x < cellXLen; x++) {
         for (y = 0; y < cellYLen; y++){
-            randomState = (Math.random() >= 0.5) ? 1 : 0;
+            randomState = (Math.random() >= 0.8) ? 1 : 0;
             console.log("Random State: " + randomState);
             cells[[x, y]] = randomState;
             drawCell(x, y, randomState);
